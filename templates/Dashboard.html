@@ -6,7 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../states/normalize.min.css">
-    <link rel="stylesheet" href="../states/style-login.css">
+    <link rel="stylesheet" href="../states/style-dash.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/helpers.esm.min.js" integrity="sha512-b3xZ1Eh852+/Ltha4XJd59YP2d+I+B6NPdB4H+Wns29GX9x5pLwlp8jnQtJYog3d5Xk1SWvhT2lgJDDBvpV0ow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
     <title>Registro e inicio de sesión</title>
 </head>
 
@@ -19,61 +22,59 @@
         </div>
         <nav>
             <h2>RADISSON ROYAL DUBAI</h2>
+            
             <ul>
-                <li class="habitaciones"><a href="#">Busqueda de habitaciones</a></li>
-                <li class="dashboard"><a href="#">Dashboard Administrativo</a></li>
+            <li class="dashboard"><a href="#">Editar Habitaciones</a></li>
+            
             </ul>
         </nav>
     </header>
     <section>
         <div class="form">
+            <h1 class="title">Dashboard administrativo</h1>
             <div class="columnas">
-                <div id="registro">
-                    <h3>Registrarse</h3>
-                    <div class="nombre-apellido">
-                        <div class="nombre">
+                <div id="datos">
+                    <h3>Ingresos</h3>
+                    <div>
+                        <div class="habitaciones">
                             <label>
-                                Nombre<span class="req">*</span>
+                                Habitaciones: <span>$$$$$</span>
                             </label>
-                            <input type="text" required autocomplete="off" />
-                        </div>
-                        <div class="apellido">
+                         </div>
+                         <div class="otros">
                             <label>
-                                Apellido<span class="req">*</span>
+                                Otros: <span>$$$$$</span>
                             </label>
-                            <input type="text" required autocomplete="off" />
-                        </div>
+                         </div>
+                         <div class="total">
+                            <label>
+                                Total: <span>$$$$$</span>
+                            </label>
+                         </div>
                     </div>
-                    <div class="correo-registro">
-                        <label>
-                            Correo Electrónico<span class="req">*</span>
-                        </label>
-                        <input type="email" required autocomplete="off" />
-                    </div>
-                    <div class="contraseña-registro">
-                        <label>
-                            Contraseña<span class="req">*</span>
-                        </label>
-                        <input type="password" required autocomplete="off" />
-                    </div>
-                    <button type="submit" class="button button-block" />Registrarse</button>
                 </div>
-                <div id="iniciar">
-                    <h3>Iniciar Sesión</h3>
-                    <div class="correo-iniciar">
-                        <label>
-                            Correo Electrónico<span class="req">*</span>
-                        </label>
-                        <input type="email" required autocomplete="off" />
-                    </div>
-                    <div class="contraseña-iniciar">
-                        <label>
-                            Contraseña<span class="req">*</span>
-                        </label>
-                        <input type="password" required autocomplete="off" />
-                    </div>
-                    <p class="olvidar"><a href="#">Olvidaste la contraseña?</a></p>
-                    <button class="button button-block" />Iniciar Sesión</button>
+                <div id="datos">
+                    <h3>Proveedor de reservas</h3>
+                    <canvas id="myChart1" width="50" height="50"></canvas>
+                    
+                </div>
+                <div id="datos">
+                    <h3>Incremento de ingresos</h3>
+                    <canvas id="myChart2" width="50" height="50"></canvas>
+                </div>
+            </div>
+            <div class="columnas">
+                <div id="datos2">
+                    <h3>Satisfacción de clientes</h3>
+                    <canvas  id="myChart3" width="300" height="200"></canvas>
+                </div>
+                <div id="datos2">
+                    <h3>Capacidad de respuesta personal</h3>
+                    <canvas id="myChart4" width="300" height="200"></canvas>
+                </div>
+                <div id="datos2">
+                    <h3>Efectividad adquisición de clientes</h3>
+                    <canvas  id="myChart5" width="300" height="200"></canvas>
                 </div>
             </div>
         </div>
@@ -86,6 +87,160 @@
             <img src="../assets/youtube.svg" alt="">
         </div>
     </footer>
+
+
+
+ 
+                    <script>
+                      var ctx = document.getElementById("myChart2");
+                      var myChart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                          labels: ["2018", "2019", "2020", "2021"],
+                          datasets: [{
+                            data: [15339, 21345, 18483, 24003],
+                            lineTension: 0,
+                            backgroundColor: 'transparent',
+                            borderColor: '#007bff',
+                            borderWidth: 4,
+                            pointBackgroundColor: '#007bff'
+                          }]
+                        },
+                        options: {
+                          scales: {
+                            yAxes: [{
+                              ticks: {
+                                beginAtZero: true
+                              }
+                            }]
+                          },
+                          legend: {
+                            display: false,
+                          }
+                        }
+                      });
+                    </script>
+
+
+<script>
+    var ctx = document.getElementById("myChart3");
+    var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ["2018", "2019", "2020", "2021"],
+        datasets: [{
+          data: [15339, 21345, 18483, 24003],
+          lineTension: 0,
+          backgroundColor: 'transparent',
+          borderColor: '#007bff',
+          borderWidth: 4,
+          pointBackgroundColor: '#007bff'
+        }]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        },
+        legend: {
+          display: false,
+        }
+      }
+    });
+  </script>
+  <script>
+      var a = document.getElementById("myChart1");
+      var myChart = new Chart(a, {
+      type: 'pie',
+      data: {
+        labels: ["En linea", "Telefono", "Otros"],
+        datasets: [{
+        label: 'My First Dataset',
+        data: [300, 50, 100],
+        backgroundColor: [
+        'rgb(255, 99, 132)',
+        'rgb(54, 162, 235)',
+        'rgb(255, 205, 86)'
+            ],
+        hoverOffset: 4
+        }]
+      },
+      options:{
+            legend:{
+                display:true
+                
+            
+            }
+        
+      }
+
+      });
+
+  </script>
+
+<script>
+    var ctx = document.getElementById("myChart4");
+    var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ["2018", "2019", "2020", "2021"],
+        datasets: [{
+          data: [15339, 21345, 18483, 24003],
+          lineTension: 0,
+          backgroundColor: 'transparent',
+          borderColor: '#007bff',
+          borderWidth: 4,
+          pointBackgroundColor: '#007bff'
+        }]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        },
+        legend: {
+          display: false,
+        }
+      }
+    });
+  </script>
+
+<script>
+    var ctx = document.getElementById("myChart5");
+    var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ["2018", "2019", "2020", "2021"],
+        datasets: [{
+          data: [15339, 21345, 18483, 24003],
+          lineTension: 0,
+          backgroundColor: 'transparent',
+          borderColor: '#007bff',
+          borderWidth: 4,
+          pointBackgroundColor: '#007bff'
+        }]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        },
+        legend: {
+          display: false,
+        }
+      }
+    });
+  </script>
+
 </body>
 
 </html>
