@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../states/normalize.min.css">
+    <link rel="stylesheet" href="../states/style-dash.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style-bedrooms.css">
+    <script src="https://use.fontawesome.com/49e3091f53.js"></script>
+    <title>Registro e inicio de sesión</title>
+</head>
+
+<body>
+    <header>
+        <div class="encabezado">
+            <div class="logo">
+                <img src="../assets/logo.png" alt="">
+            </div>
+        </div>
+        <nav>
+            <h2>RADISSON ROYAL DUBAI</h2>
+
+            <ul>
+                <li class="dashboard">
+                    <a href="#">Registrarse o Iniciar sesión</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="container mt-3">
+            <div class="mt-5 mb-5 p-search">
+                <form class="row g-3">
+                    <div class="col-md-4">
+                        <label class="form-label">Fecha de llegada</label>
+                        <input type="date" class="form-control" id="validationCustom01" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Fecha de salida</label>
+                        <input type="date" class="form-control" id="validationCustom01" required>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">No. de huespedes</label>
+                        <input type="number" class="form-control" id="validationCustom01" required>
+                    </div>
+                    <div class="col-md-2 mt-5">
+                        <button class="btn btn-primary btn-custom" style="width: 100%;" type="submit">Buscar</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- contenedor de tarjetas -->
+            <div>
+                <div class="card round shadow mb-4 bg-body" style="max-width: 100%; max-height: 175px;">
+                    <div class="row g-0">
+                        <div class="col-md-3 pl-2" style="max-height: 157px;">
+                            <img src="../assets/habitacion1.jpg" class="img-fluid round mt-2 mb-2 ms-2 img-efects"
+                                alt="...">
+                        </div>
+                        <div class="col-md-9 ps-3">
+                            <div class="row g-0">
+                                <div class="card-body d-flex">
+                                    <div class="col-md-7">
+                                        <h3 class="card-title">Habitacion 1</h3>
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <p class="card-text mb-0 mt-3">
+                                                    <small class="text-muted fz-16">
+                                                        <img src="../assets/bath-solid.svg" width="16px"
+                                                            class="me-2 mb-2">Baños: 1
+                                                    </small>
+                                                </p>
+                                                <p class="card-text mb-0 mt-1">
+                                                    <small class="text-muted fz-16">
+                                                        <img src="../assets/users-solid.svg" width="16px"
+                                                            class="me-2 mb-1">Huespedes: 1
+                                                    </small>
+                                                </p>
+                                                <p class="card-text mb-0 mt-1">
+                                                    <small class="text-muted fz-16">
+                                                        <img src="../assets/bed-solid.svg" width="16px"
+                                                            class="me-2 mb-1">Camas: 1
+                                                    </small>
+                                                </p>
+                                            </div>
+                                            <div class="col-md-7">
+                                                <p class="card-text mb-0 mt-3">
+                                                    <small class="text-muted fz-16">
+                                                        <img src="../assets/air-conditioner-solid.svg" width="16px"
+                                                            class="me-2 mb-1 color-G">Aire acondicionado: 1
+                                                    </small>
+                                                </p>
+                                                <p class="card-text mb-0 mt-1">
+                                                    <small class="text-muted fz-16">
+                                                        <img src="../assets/wifi-solid.svg" width="16px"
+                                                            class="me-2 mb-1">WiFi: 1
+                                                    </small>
+                                                </p>
+                                                <p class="card-text mb-0 mt-1">
+                                                    <small class="text-muted fz-16">
+                                                        <img src="../assets/oven-solid.svg" width="16px"
+                                                            class="me-2 mb-1">Cocina: 1
+                                                    </small>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-5 d-flex flex-column align-items-center">
+                                        <h2 class="mt-3">$230.000</h2>
+                                        <button class="btn btn-primary btn-custom mt-3 btn-large">Reserva
+                                            ahora!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card round shadow mb-4 bg-body" style="max-width: 100%; max-height: 175px;">
+                    <div class="row g-0">
+                        <div class="col-md-3 pl-2" style="max-height: 157px;">
+                            <img src="../assets/habitacion2.jpg" class="img-fluid round mt-2 mb-2 ms-2 img-efects"
+                                alt="...">
+                        </div>
+                        <div class="col-md-9 ps-3">
+                            <div class="row g-0">
+                                <div class="card-body d-flex">
+                                    <div class="col-md-7">
+                                        <h3 class="card-title">Habitacion 2</h3>
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <p class="card-text mb-0 mt-3">
+                                                    <small class="text-muted fz-16">
+                                                        <img src="../assets/bath-solid.svg" width="16px"
+                                                            class="me-2 mb-2">Baños: 1
+                                                    </small>
+                                                </p>
+                                                <p class="card-text mb-0 mt-1">
+                                                    <small class="text-muted fz-16">
+                                                        <img src="../assets/users-solid.svg" width="16px"
+                                                            class="me-2 mb-1">Huespedes: 1
+                                                    </small>
+                                                </p>
+                                                <p class="card-text mb-0 mt-1">
+                                                    <small class="text-muted fz-16">
+                                                        <img src="../assets/bed-solid.svg" width="16px"
+                                                            class="me-2 mb-1">Camas: 1
+                                                    </small>
+                                                </p>
+                                            </div>
+                                            <div class="col-md-7">
+                                                <p class="card-text mb-0 mt-3">
+                                                    <small class="text-muted fz-16">
+                                                        <img src="../assets/air-conditioner-solid.svg" width="16px"
+                                                            class="me-2 mb-1 color-G">Aire acondicionado: 1
+                                                    </small>
+                                                </p>
+                                                <p class="card-text mb-0 mt-1">
+                                                    <small class="text-muted fz-16">
+                                                        <img src="../assets/wifi-solid.svg" width="16px"
+                                                            class="me-2 mb-1">WiFi: 1
+                                                    </small>
+                                                </p>
+                                                <p class="card-text mb-0 mt-1">
+                                                    <small class="text-muted fz-16">
+                                                        <img src="../assets/oven-solid.svg" width="16px"
+                                                            class="me-2 mb-1">Cocina: 1
+                                                    </small>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-5 d-flex flex-column align-items-center">
+                                        <h2 class="mt-3">$230.000</h2>
+                                        <button class="btn btn-primary btn-custom mt-3 btn-large">Reserva
+                                            ahora!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card round shadow mb-4 bg-body" style="max-width: 100%; max-height: 175px;">
+                    <div class="row g-0">
+                        <div class="col-md-3 pl-2" style="max-height: 157px;">
+                            <img src="../assets/habitacion3.jpg" class="img-fluid round mt-2 mb-2 ms-2 img-efects"
+                                alt="...">
+                        </div>
+                        <div class="col-md-9 ps-3">
+                            <div class="row g-0">
+                                <div class="card-body d-flex">
+                                    <div class="col-md-7">
+                                        <h3 class="card-title">Habitacion 3</h3>
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <p class="card-text mb-0 mt-3">
+                                                    <small class="text-muted fz-16">
+                                                        <img src="../assets/bath-solid.svg" width="16px"
+                                                            class="me-2 mb-2">Baños: 1
+                                                    </small>
+                                                </p>
+                                                <p class="card-text mb-0 mt-1">
+                                                    <small class="text-muted fz-16">
+                                                        <img src="../assets/users-solid.svg" width="16px"
+                                                            class="me-2 mb-1">Huespedes: 1
+                                                    </small>
+                                                </p>
+                                                <p class="card-text mb-0 mt-1">
+                                                    <small class="text-muted fz-16">
+                                                        <img src="../assets/bed-solid.svg" width="16px"
+                                                            class="me-2 mb-1">Camas: 1
+                                                    </small>
+                                                </p>
+                                            </div>
+                                            <div class="col-md-7">
+                                                <p class="card-text mb-0 mt-3">
+                                                    <small class="text-muted fz-16">
+                                                        <img src="../assets/air-conditioner-solid.svg" width="16px"
+                                                            class="me-2 mb-1 color-G">Aire acondicionado: 1
+                                                    </small>
+                                                </p>
+                                                <p class="card-text mb-0 mt-1">
+                                                    <small class="text-muted fz-16">
+                                                        <img src="../assets/wifi-solid.svg" width="16px"
+                                                            class="me-2 mb-1">WiFi: 1
+                                                    </small>
+                                                </p>
+                                                <p class="card-text mb-0 mt-1">
+                                                    <small class="text-muted fz-16">
+                                                        <img src="../assets/oven-solid.svg" width="16px"
+                                                            class="me-2 mb-1">Cocina: 1
+                                                    </small>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-5 d-flex flex-column align-items-center">
+                                        <h2 class="mt-3">$230.000</h2>
+                                        <button class="btn btn-primary btn-custom mt-3 btn-large">Reserva
+                                            ahora!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card round shadow mb-4 bg-body" style="max-width: 100%; max-height: 175px;">
+                    <div class="row g-0">
+                        <div class="col-md-3 pl-2" style="max-height: 157px;">
+                            <img src="../assets/habitacion4.jpg" class="img-fluid round mt-2 mb-2 ms-2 img-efects"
+                                alt="...">
+                        </div>
+                        <div class="col-md-9 ps-3">
+                            <div class="row g-0">
+                                <div class="card-body d-flex">
+                                    <div class="col-md-7">
+                                        <h3 class="card-title">Habitacion 4</h3>
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <p class="card-text mb-0 mt-3">
+                                                    <small class="text-muted fz-16">
+                                                        <img src="../assets/bath-solid.svg" width="16px"
+                                                            class="me-2 mb-2">Baños: 1
+                                                    </small>
+                                                </p>
+                                                <p class="card-text mb-0 mt-1">
+                                                    <small class="text-muted fz-16">
+                                                        <img src="../assets/users-solid.svg" width="16px"
+                                                            class="me-2 mb-1">Huespedes: 1
+                                                    </small>
+                                                </p>
+                                                <p class="card-text mb-0 mt-1">
+                                                    <small class="text-muted fz-16">
+                                                        <img src="../assets/bed-solid.svg" width="16px"
+                                                            class="me-2 mb-1">Camas: 1
+                                                    </small>
+                                                </p>
+                                            </div>
+                                            <div class="col-md-7">
+                                                <p class="card-text mb-0 mt-3">
+                                                    <small class="text-muted fz-16">
+                                                        <img src="../assets/air-conditioner-solid.svg" width="16px"
+                                                            class="me-2 mb-1 color-G">Aire acondicionado: 1
+                                                    </small>
+                                                </p>
+                                                <p class="card-text mb-0 mt-1">
+                                                    <small class="text-muted fz-16">
+                                                        <img src="../assets/wifi-solid.svg" width="16px"
+                                                            class="me-2 mb-1">WiFi: 1
+                                                    </small>
+                                                </p>
+                                                <p class="card-text mb-0 mt-1">
+                                                    <small class="text-muted fz-16">
+                                                        <img src="../assets/oven-solid.svg" width="16px"
+                                                            class="me-2 mb-1">Cocina: 1
+                                                    </small>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-5 d-flex flex-column align-items-center">
+                                        <h2 class="mt-3">$230.000</h2>
+                                        <button class="btn btn-primary btn-custom mt-3 btn-large">Reserva
+                                            ahora!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="redes-sociales">
+            <img src="../assets/facebook.svg" alt="">
+            <img src="../assets/instagram.svg" alt="">
+            <img src="../assets/twitter.svg" alt="">
+            <img src="../assets/youtube.svg" alt="">
+        </div>
+    </footer>
+</body>
+
+</html>
