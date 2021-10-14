@@ -20,6 +20,6 @@ def bedrooms():
     return render_template('bedrooms.html')
 
 @app.route('/bedrooms')
-def bedrooms():
+def bedroom_actions():
     return render_template('bedroom-actions.html')
 
