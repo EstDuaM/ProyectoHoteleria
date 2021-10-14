@@ -19,7 +19,7 @@ def dashboard():
 def bedrooms():
     return render_template('bedrooms.html')
 
-@app.route('/bedrooms')
+@app.route('/bedrooms_actions')
 def bedroom_actions():
     return render_template('bedroom-actions.html')
 
