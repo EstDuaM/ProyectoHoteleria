@@ -48,7 +48,7 @@
                         <label>
                             Correo Electrónico<span class="req">*</span>
                         </label>
-                        <input type="email" required autocomplete="off" />
+                        <input type="email" id="caja" required autocomplete="off" />
                     </div>
                     <div class="contraseña-registro">
                         <label>
@@ -56,7 +56,7 @@
                         </label>
                         <input type="password" required autocomplete="off" />
                     </div>
-                    <button type="submit" class="button button-block" />Registrarse</button>
+                    <button type="submit" id="boton" class="button button-block" />Registrarse</button>
                 </div>
                 <div id="iniciar">
                     <h3>Iniciar Sesión</h3>
@@ -64,7 +64,7 @@
                         <label>
                             Correo Electrónico<span class="req">*</span>
                         </label>
-                        <input type="email" required autocomplete="off" />
+                        <input type="email" id="caja2" required autocomplete="off" />
                     </div>
                     <div class="contraseña-iniciar">
                         <label>
@@ -73,11 +73,13 @@
                         <input type="password" required autocomplete="off" />
                     </div>
                     <p class="olvidar"><a href="#">Olvidaste la contraseña?</a></p>
-                    <button class="button button-block" />Iniciar Sesión</button>
+                    <button id="boton2" class="button button-block" />Iniciar Sesión</button>
                 </div>
             </div>
         </div>
     </section>
+
+ 
     <footer>
         <div class="redes-sociales">
             <img src="{{url_for('static', filename='../static/assets/facebook.svg')}}">
@@ -91,5 +93,5 @@
 </html>
 
 </body>
-
+<script src={{ url_for ('static', filename='../static/js/validate.js')}}></script>
 </html>
