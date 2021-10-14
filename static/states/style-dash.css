@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
+}
+
+footer {
+    background: #d4bd55;
+    padding: 25px 0px 25px 0px;
+    text-align: center;
+    border: 3px solid black;
+}
+
+footer .redes-sociales img{
+    width: 20px; height: 20px; 
+}
+
+header {
+    background: #d4bd55;
+    text-align: center;
+}
+
+header .encabezado{
+    overflow: hidden;
+    
+}
+
+
+
+header nav {
+    background: rgb(188, 190, 49);
+    display: flex;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 15px 0px 15px 80px;
+    margin: 0px;
+    display: flex;
+    border-left: 3px solid #000000;
+}
+
+header nav ul li {
+    margin-top: 10px;
+    margin-left: 700px;
+
+}
+
+header nav ul li a {
+    color: black;
+    text-decoration: none;
+    padding: 15px 2px 15px 80px;
+}
+
+header nav ul li a:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+header nav ul .dashboard {
+    padding-block-end: 10px;
+}
+
+header nav ul .dashboard a{
+    padding: 5px 10px 5px 10px;
+    border: 3px solid black;
+    border-block-color: black;
+    background-color: #998a33;
+}
+
+header nav ul .habitaciones {
+    padding-top: 10px;
+    margin-left: 400px;
+}
+header nav ul .habitaciones a {
+    padding: 5px 10px 5px 10px;
+    border: 3px solid black;
+    border-block-color: black;
+    background-color: #998a33;
+}
+
+
+header nav h2{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+header div .logo img{
+    width: 110px; 
+    padding: 0px 0px 0px 0px;
+}
+
+section .form .columnas{
+    display: flex;
+}
+
+
+
+section .title{
+  
+color:#000000;
+text-shadow:0.1em 0.1em cadetblue ;
+text-align: center;
+margin-top: 50px;
+-webkit-text-stroke: 1px #d4bd55;
+
+}
+
+section .form .columnas #datos{
+    padding: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section .form .columnas #datos2{
+    padding: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+section .form .columnas #datos h3{
+   text-align: center;
+   padding-bottom: 5px;
+   
+}   
+
+section .form .columnas #datos span{
+    
+color: #998a33;
+
+ }   
+
+section .form .columnas #datos2 h3{
+    text-align: center;
+    padding-bottom: 5px;
+}   
+
+section .form .columnas #datos .habitaciones{
+    margin-bottom: 15px;
+}
+
+
+section .form .columnas #datos .otros{
+    margin-bottom: 15px;
+}
+
+
+section .form .columnas #datos .total{
+    margin-bottom: 15px;
+}
+
+section .form .columnas #registro .contraseña-registro{
+    margin-bottom: 30px;
+}
