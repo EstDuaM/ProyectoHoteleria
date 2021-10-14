@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../states/normalize.min.css">
-    <link rel="stylesheet" href="../states/style-dash.css">
-    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/style-bedrooms.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename= '../static/states/normalize.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename= '../static/states/style-dash.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= '../static/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename= '../static/states/style-bedrooms.css') }}">
     <script src="https://use.fontawesome.com/49e3091f53.js"></script>
     <title>Registro e inicio de sesión</title>
 </head>
@@ -17,7 +17,7 @@
     <header>
         <div class="encabezado">
             <div class="logo">
-                <img src="../assets/logo.png" alt="">
+                <img src="{{url_for('static', filename='../static/assets/logo.png')}}" alt="">
             </div>
         </div>
         <nav>
@@ -57,7 +57,7 @@
                 <div class="card round shadow mb-4 bg-body" style="max-width: 100%; max-height: 175px;">
                     <div class="row g-0">
                         <div class="col-md-3 pl-2" style="max-height: 157px;">
-                            <img src="../assets/habitacion1.jpg" class="img-fluid round mt-2 mb-2 ms-2 img-efects"
+                            <img src="{{url_for('static', filename='../static/assets/habitacion1.jpg')}}" class="img-fluid round mt-2 mb-2 ms-2 img-efects"
                                 alt="...">
                         </div>
                         <div class="col-md-9 ps-3">
@@ -69,19 +69,19 @@
                                             <div class="col-md-5">
                                                 <p class="card-text mb-0 mt-3">
                                                     <small class="text-muted fz-16">
-                                                        <img src="../assets/bath-solid.svg" width="16px"
+                                                        <img src="{{url_for('static', filename='../static/assets/bath-solid.svg')}}" width="16px"
                                                             class="me-2 mb-2">Baños: 1
                                                     </small>
                                                 </p>
                                                 <p class="card-text mb-0 mt-1">
                                                     <small class="text-muted fz-16">
-                                                        <img src="../assets/users-solid.svg" width="16px"
+                                                        <img src="{{url_for('static', filename='../static/assets/users-solid.svg')}}" width="16px"
                                                             class="me-2 mb-1">Huespedes: 1
                                                     </small>
                                                 </p>
                                                 <p class="card-text mb-0 mt-1">
                                                     <small class="text-muted fz-16">
-                                                        <img src="../assets/bed-solid.svg" width="16px"
+                                                        <img src="{{url_for('static', filename='../static/assets/bed-solid.svg')}}" alt=""  width="16px"
                                                             class="me-2 mb-1">Camas: 1
                                                     </small>
                                                 </p>
@@ -89,19 +89,19 @@
                                             <div class="col-md-7">
                                                 <p class="card-text mb-0 mt-3">
                                                     <small class="text-muted fz-16">
-                                                        <img src="../assets/air-conditioner-solid.svg" width="16px"
+                                                        <img src="{{url_for('static', filename='../static/assets/air-conditioner-solid.svg')}}" alt="" width="16px"
                                                             class="me-2 mb-1 color-G">Aire acondicionado: 1
                                                     </small>
                                                 </p>
                                                 <p class="card-text mb-0 mt-1">
                                                     <small class="text-muted fz-16">
-                                                        <img src="../assets/wifi-solid.svg" width="16px"
+                                                        <img src="{{url_for('static', filename='../static/assets/wifi-solid.svg')}}" alt="" width="16px"
                                                             class="me-2 mb-1">WiFi: 1
                                                     </small>
                                                 </p>
                                                 <p class="card-text mb-0 mt-1">
                                                     <small class="text-muted fz-16">
-                                                        <img src="../assets/oven-solid.svg" width="16px"
+                                                        <img src="{{url_for('static', filename='../static/assets/oven-solid.svg')}}" alt="" width="16px"
                                                             class="me-2 mb-1">Cocina: 1
                                                     </small>
                                                 </p>
@@ -123,7 +123,7 @@
                 <div class="card round shadow mb-4 bg-body" style="max-width: 100%; max-height: 175px;">
                     <div class="row g-0">
                         <div class="col-md-3 pl-2" style="max-height: 157px;">
-                            <img src="../assets/habitacion2.jpg" class="img-fluid round mt-2 mb-2 ms-2 img-efects"
+                            <img src="{{url_for('static', filename='../static/assets/habitacion2.jpg')}}" class="img-fluid round mt-2 mb-2 ms-2 img-efects"
                                 alt="...">
                         </div>
                         <div class="col-md-9 ps-3">
@@ -135,19 +135,19 @@
                                             <div class="col-md-5">
                                                 <p class="card-text mb-0 mt-3">
                                                     <small class="text-muted fz-16">
-                                                        <img src="../assets/bath-solid.svg" width="16px"
+                                                        <img src="{{url_for('static', filename='../static/assets/bath-solid.svg')}}" width="16px"
                                                             class="me-2 mb-2">Baños: 1
                                                     </small>
                                                 </p>
                                                 <p class="card-text mb-0 mt-1">
                                                     <small class="text-muted fz-16">
-                                                        <img src="../assets/users-solid.svg" width="16px"
+                                                        <img src="{{url_for('static', filename='../static/assets/users-solid.svg')}}" width="16px"
                                                             class="me-2 mb-1">Huespedes: 1
                                                     </small>
                                                 </p>
                                                 <p class="card-text mb-0 mt-1">
                                                     <small class="text-muted fz-16">
-                                                        <img src="../assets/bed-solid.svg" width="16px"
+                                                        <img src="{{url_for('static', filename='../static/assets/bed-solid.svg')}}" width="16px"
                                                             class="me-2 mb-1">Camas: 1
                                                     </small>
                                                 </p>
@@ -155,19 +155,19 @@
                                             <div class="col-md-7">
                                                 <p class="card-text mb-0 mt-3">
                                                     <small class="text-muted fz-16">
-                                                        <img src="../assets/air-conditioner-solid.svg" width="16px"
+                                                        <img src="{{url_for('static', filename='../static/assets/air-conditioner-solid.svg')}}" width="16px"
                                                             class="me-2 mb-1 color-G">Aire acondicionado: 1
                                                     </small>
                                                 </p>
                                                 <p class="card-text mb-0 mt-1">
                                                     <small class="text-muted fz-16">
-                                                        <img src="../assets/wifi-solid.svg" width="16px"
+                                                        <img src="{{url_for('static', filename='../static/assets/wifi-solid.svg')}}" width="16px"
                                                             class="me-2 mb-1">WiFi: 1
                                                     </small>
                                                 </p>
                                                 <p class="card-text mb-0 mt-1">
                                                     <small class="text-muted fz-16">
-                                                        <img src="../assets/oven-solid.svg" width="16px"
+                                                        <img src="{{url_for('static', filename='../static/assets/oven-solid.svg')}}" width="16px"
                                                             class="me-2 mb-1">Cocina: 1
                                                     </small>
                                                 </p>
@@ -189,7 +189,7 @@
                 <div class="card round shadow mb-4 bg-body" style="max-width: 100%; max-height: 175px;">
                     <div class="row g-0">
                         <div class="col-md-3 pl-2" style="max-height: 157px;">
-                            <img src="../assets/habitacion3.jpg" class="img-fluid round mt-2 mb-2 ms-2 img-efects"
+                            <img src="{{url_for('static', filename='../static/assets/habitacion3.jpg')}}" class="img-fluid round mt-2 mb-2 ms-2 img-efects"
                                 alt="...">
                         </div>
                         <div class="col-md-9 ps-3">
@@ -201,19 +201,19 @@
                                             <div class="col-md-5">
                                                 <p class="card-text mb-0 mt-3">
                                                     <small class="text-muted fz-16">
-                                                        <img src="../assets/bath-solid.svg" width="16px"
+                                                        <img src="{{url_for('static', filename='../static/assets/bath-solid.svg')}}" width="16px"
                                                             class="me-2 mb-2">Baños: 1
                                                     </small>
                                                 </p>
                                                 <p class="card-text mb-0 mt-1">
                                                     <small class="text-muted fz-16">
-                                                        <img src="../assets/users-solid.svg" width="16px"
+                                                        <img src="{{url_for('static', filename='../static/assets/users-solid.svg')}}" width="16px"
                                                             class="me-2 mb-1">Huespedes: 1
                                                     </small>
                                                 </p>
                                                 <p class="card-text mb-0 mt-1">
                                                     <small class="text-muted fz-16">
-                                                        <img src="../assets/bed-solid.svg" width="16px"
+                                                        <img src="{{url_for('static', filename='../static/assets/bed-solid.svg')}}"width="16px"
                                                             class="me-2 mb-1">Camas: 1
                                                     </small>
                                                 </p>
@@ -221,19 +221,19 @@
                                             <div class="col-md-7">
                                                 <p class="card-text mb-0 mt-3">
                                                     <small class="text-muted fz-16">
-                                                        <img src="../assets/air-conditioner-solid.svg" width="16px"
+                                                        <img src="{{url_for('static', filename='../static/assets/air-conditioner-solid.svg')}}" width="16px"
                                                             class="me-2 mb-1 color-G">Aire acondicionado: 1
                                                     </small>
                                                 </p>
                                                 <p class="card-text mb-0 mt-1">
                                                     <small class="text-muted fz-16">
-                                                        <img src="../assets/wifi-solid.svg" width="16px"
+                                                        <img src="{{url_for('static', filename='../static/assets/wifi-solid.svg')}}" width="16px"
                                                             class="me-2 mb-1">WiFi: 1
                                                     </small>
                                                 </p>
                                                 <p class="card-text mb-0 mt-1">
                                                     <small class="text-muted fz-16">
-                                                        <img src="../assets/oven-solid.svg" width="16px"
+                                                        <img src="{{url_for('static', filename='../static/assets/oven-solid.svg')}}" width="16px"
                                                             class="me-2 mb-1">Cocina: 1
                                                     </small>
                                                 </p>
@@ -255,7 +255,7 @@
                 <div class="card round shadow mb-4 bg-body" style="max-width: 100%; max-height: 175px;">
                     <div class="row g-0">
                         <div class="col-md-3 pl-2" style="max-height: 157px;">
-                            <img src="../assets/habitacion4.jpg" class="img-fluid round mt-2 mb-2 ms-2 img-efects"
+                            <img src="{{url_for('static', filename='../static/assets/habitacion4.jpg')}}"class="img-fluid round mt-2 mb-2 ms-2 img-efects"
                                 alt="...">
                         </div>
                         <div class="col-md-9 ps-3">
@@ -267,19 +267,19 @@
                                             <div class="col-md-5">
                                                 <p class="card-text mb-0 mt-3">
                                                     <small class="text-muted fz-16">
-                                                        <img src="../assets/bath-solid.svg" width="16px"
+                                                        <img src="{{url_for('static', filename='../static/assets/bath-solid.svg')}}" width="16px"
                                                             class="me-2 mb-2">Baños: 1
                                                     </small>
                                                 </p>
                                                 <p class="card-text mb-0 mt-1">
                                                     <small class="text-muted fz-16">
-                                                        <img src="../assets/users-solid.svg" width="16px"
+                                                        <img src="{{url_for('static', filename='../static/assets/users-solid.svg')}}" width="16px"
                                                             class="me-2 mb-1">Huespedes: 1
                                                     </small>
                                                 </p>
                                                 <p class="card-text mb-0 mt-1">
                                                     <small class="text-muted fz-16">
-                                                        <img src="../assets/bed-solid.svg" width="16px"
+                                                        <img src="../static/assets/bed-solid.svg" width="16px"
                                                             class="me-2 mb-1">Camas: 1
                                                     </small>
                                                 </p>
@@ -287,19 +287,19 @@
                                             <div class="col-md-7">
                                                 <p class="card-text mb-0 mt-3">
                                                     <small class="text-muted fz-16">
-                                                        <img src="../assets/air-conditioner-solid.svg" width="16px"
+                                                        <img src="../static/assets/air-conditioner-solid.svg" width="16px"
                                                             class="me-2 mb-1 color-G">Aire acondicionado: 1
                                                     </small>
                                                 </p>
                                                 <p class="card-text mb-0 mt-1">
                                                     <small class="text-muted fz-16">
-                                                        <img src="../assets/wifi-solid.svg" width="16px"
+                                                        <img src="../static/assets/wifi-solid.svg" width="16px"
                                                             class="me-2 mb-1">WiFi: 1
                                                     </small>
                                                 </p>
                                                 <p class="card-text mb-0 mt-1">
                                                     <small class="text-muted fz-16">
-                                                        <img src="../assets/oven-solid.svg" width="16px"
+                                                        <img src="../static/assets/oven-solid.svg" width="16px"
                                                             class="me-2 mb-1">Cocina: 1
                                                     </small>
                                                 </p>
@@ -322,10 +322,10 @@
     </section>
     <footer>
         <div class="redes-sociales">
-            <img src="../assets/facebook.svg" alt="">
-            <img src="../assets/instagram.svg" alt="">
-            <img src="../assets/twitter.svg" alt="">
-            <img src="../assets/youtube.svg" alt="">
+            <img src="{{url_for('static', filename='../static/assets/facebook.svg')}}">
+            <img src="{{url_for('static', filename='../static/assets/instagram.svg')}}">
+            <img src="{{url_for('static', filename='../static/assets/twitter.svg')}}">
+            <img src="{{url_for('static', filename='../static/assets/youtube.svg')}}">
         </div>
     </footer>
 </body>

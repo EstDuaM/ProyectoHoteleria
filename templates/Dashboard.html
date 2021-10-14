@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../states/normalize.min.css">
-    <link rel="stylesheet" href="../states/style-dash.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename= '../static/states/normalize.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename= '../static/states/style-dash.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= '../static/css/bootstrap.min.css') }}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/helpers.esm.min.js" integrity="sha512-b3xZ1Eh852+/Ltha4XJd59YP2d+I+B6NPdB4H+Wns29GX9x5pLwlp8jnQtJYog3d5Xk1SWvhT2lgJDDBvpV0ow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
     <title>Registro e inicio de sesión</title>
@@ -17,7 +17,7 @@
     <header>
         <div class="encabezado">
             <div class="logo">
-                <img src="../assets/logo.png" alt="">
+              <img src="{{url_for('static', filename='../static/assets/logo.png')}}" alt="">
             </div>
         </div>
         <nav>
@@ -81,10 +81,10 @@
     </section>
     <footer>
         <div class="redes-sociales">
-            <img src="../assets/facebook.svg" alt="">
-            <img src="../assets/instagram.svg" alt="">
-            <img src="../assets/twitter.svg" alt="">
-            <img src="../assets/youtube.svg" alt="">
+          <img src="{{url_for('static', filename='../static/assets/facebook.svg')}}">
+            <img src="{{url_for('static', filename='../static/assets/instagram.svg')}}">
+            <img src="{{url_for('static', filename='../static/assets/twitter.svg')}}">
+            <img src="{{url_for('static', filename='../static/assets/youtube.svg')}}">
         </div>
     </footer>
 

@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href={{ url_for('static', filename='states/style-login.css')}}>
-    <link rel="stylesheet" href={{ url_for ('static', filename='states/normalize.min.css')}}>
+    <link rel="stylesheet" href="{{ url_for('static', filename= '../static/states/style-login.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename= '../static/states/normalize.min.css') }}">
     <title>Registro e inicio de sesión</title>
 </head>
 
@@ -14,7 +14,7 @@
     <header>
         <div class="encabezado">
             <div class="logo">
-                <img src="../assets/logo.png" alt="">
+                <img src="{{url_for('static', filename='../static/assets/logo.png')}}" alt="">
             </div>
         </div>
         <nav>
@@ -32,10 +32,10 @@
                     <h3>Registrarse</h3>
                     <div class="nombre-apellido">
                         <div class="nombre">
-                            <label>
+                            <label for="name">
                                 Nombre<span class="req">*</span>
                             </label>
-                            <input type="text" required autocomplete="off" />
+                            <input type="text" id="name" required autocomplete="off" />
                         </div>
                         <div class="apellido">
                             <label>
@@ -80,10 +80,10 @@
     </section>
     <footer>
         <div class="redes-sociales">
-            <img src="../assets/facebook.svg" alt="">
-            <img src="../assets/instagram.svg" alt="">
-            <img src="../assets/twitter.svg" alt="">
-            <img src="../assets/youtube.svg" alt="">
+            <img src="{{url_for('static', filename='../static/assets/facebook.svg')}}">
+            <img src="{{url_for('static', filename='../static/assets/instagram.svg')}}">
+            <img src="{{url_for('static', filename='../static/assets/twitter.svg')}}">
+            <img src="{{url_for('static', filename='../static/assets/youtube.svg')}}">
         </div>
     </footer>
 </body>
