@@ -7,8 +7,10 @@ app = Flask(__name__)
 def bienvenido():
     return render_template('welcome.html')
 
-@app.route('/login')
+@app.route('/login', methods=['GET', 'POST'])
 def login():
+    
+    print(request.form)
     return render_template('login.html')
 
 @app.route('/dashboard')
