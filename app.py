@@ -10,8 +10,20 @@ def bienvenido():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     
-    print(request.form)
-    return render_template('login.html')
+    #print(request.form)
+    if request.method == 'POST':
+        nombre = request.form['nombre']
+        apellido = request.form["apellido"]
+        correo = request.form["correo"]
+        contraseña = request.form["contra"]
+        
+        print(nombre)
+        print(apellido)
+        print(correo)
+        print(contraseña)
+        return render_template('login.html')
+    else:
+        return render_template('login.html')
 
 @app.route('/dashboard')
 def dashboard():
