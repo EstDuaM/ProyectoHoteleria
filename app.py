@@ -1,10 +1,12 @@
 from flask import Flask, render_template, request
 import smtplib
+import bd
 
 app = Flask(__name__)
 
 @app.route('/')
 def bienvenido():
+    bd.sql_conexion
     return render_template('welcome.html')
 
 @app.route('/login', methods=['GET', 'POST'])
