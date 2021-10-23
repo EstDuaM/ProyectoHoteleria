@@ -38,3 +38,7 @@ def bedrooms():
 def bedroom_actions():
     return render_template('bedroom-actions.html')
 
+@app.route('/bedrooms_qualify')
+def bedroom_qualify():
+    return render_template('bedroom-qualify.html')
+
