@@ -11,21 +11,20 @@ def bienvenido():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    
-    #print(request.form)
-    if request.method == 'POST':
-        nombre = request.form['nombre']
-        apellido = request.form["apellido"]
-        correo = request.form["correo"]
-        contraseña = request.form["contra"]
-        
-        print(nombre)
-        print(apellido)
-        print(correo)
-        print(contraseña)
+
+    if request.method == 'GET':
         return render_template('login.html')
-    else:
-        return render_template('login.html')
+    else: 
+        if request.form['boton-env'] == "anterior":
+            nombre = request.form['nombre']
+            apellido = request.form["apellido"]
+            correo = request.form["correo"]
+            contraseña = request.form["contraseña"]
+            return redirect('/bedrooms')
+        elif request.form['boton-env'] == "siguiente":
+            correoIni = request.form['correo-ini']
+            contraIni = request.form["contra-ini"]
+            return redirect('/bedrooms')
 
 @app.route('/dashboard')
 def dashboard():
