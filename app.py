@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect, jsonify, send_file,
 from werkzeug.utils import redirect
 import werkzeug.security as ws
 import bd
+from flask import make_response
 
 app = Flask(__name__)
 app.secret_key = 'mi_llave_secreta'
@@ -17,10 +18,11 @@ def antes_peticion():
 @app.route('/')
 def bienvenido():
     return render_template('welcome.html')
+    
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    
+
     if request.method == 'GET':
         return render_template('login.html')
     else: 
@@ -52,18 +54,15 @@ def login():
 def perfil(correo=None):
     if correo:
         registro_usuario = bd.obtener_registro('Usuario', "correo='{}'".format(correo))
-
         if registro_usuario:
+            
             id_usuario = registro_usuario[0][0]
-
+            
             agregar = False
             if correo == session['correo']:
                 agregar = True
-
-            return render_template('perfil-usuario.html', correo=registro_usuario, agregar = agregar)
-        else:
-            correo = session['correo']
-            return redirect('/perfil/{}'.format(correo))     
+            
+            return render_template('perfil-usuario.html', correo = registro_usuario, agregar = agregar)     
     else:
         return render_template('perfil-usuario.html')        
 
