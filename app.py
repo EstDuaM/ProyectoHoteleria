@@ -45,7 +45,8 @@ def login():
                     session['correo'] = correoIni
                     return redirect('/perfil/{}'.format(correoIni))
             return render_template('login.html')
-        
+
+#sesión de perfil de usuario       
 @app.route('/perfil')
 @app.route('/perfil/<correo>')
 def perfil(correo=None):
