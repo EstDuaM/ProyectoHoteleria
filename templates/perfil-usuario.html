@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename= '../static/states/style-usuario.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename= '../static/states/normalize.min.css') }}">
+    <title>Perfil de usuario</title>
+</head>
+<body>
+    <header>
+        <div class="contenedor">
+            <div class="encabezado">
+                <div class="logo">
+                    <img src="{{url_for('static', filename='../static/assets/logo.png')}}" alt="">
+                </div>
+            </div>
+            <div class="salir">
+                <input type="button" value="Cerrar Sesion" id="cerrar_sesion">
+            </div>
+        </div>
+        <nav>
+            <h2>RADISSON ROYAL DUBAI</h2>
+            <ul>
+                <li class="habitaciones"><a href="bedrooms">Busqueda de habitaciones</a></li>
+                <li class="dashboard"><a href="dashboard">Dashboard Administrativo</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <section class="perfil">
+        <div class="info-perfil">
+            <div class="usuario">
+                {% if correo %}
+                <h3>{{ correo[0][1] }}</h3>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="redes-sociales">
+            <img src="{{url_for('static', filename='../static/assets/facebook.svg')}}">
+            <img src="{{url_for('static', filename='../static/assets/instagram.svg')}}">
+            <img src="{{url_for('static', filename='../static/assets/twitter.svg')}}">
+            <img src="{{url_for('static', filename='../static/assets/youtube.svg')}}">
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='../static/js/perfil.js')}}"></script>
+
+</body>
+</html>
