@@ -34,3 +34,4 @@ def insertar_usuario(nombre, apellido, correo, contraseña):
     cursor.execute(strsql)
     conexion.commit()
     conexion.close()
+
