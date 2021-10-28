@@ -39,30 +39,23 @@
             <h5>Agregar Habitación</h5>
             <h6><br>Información Básica</h6>
             <h6>Nombre de la Habitación</h6>
-            <input type="text" name="nombreHabitacion" class="form-control" placeholder="Nombre habitacion" aria-label="AAA">
-            <h6><br>Descripción de la Habitación</h6>
-            <textarea name="descripcionHabitacion" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            <h6><br>Equipo</h6>
-            <textarea name="equipoHabitacion" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            <h6><br>Tamaño</h6>
-            <input type="text" name="tamanoHabitacion" class="form-control" placeholder="XX mts2" aria-label="XX mts2">
+            <input type="text" name="Nombre" class="form-control" placeholder="Habitación # 1" aria-label="Habitación # 1">
+            <h6><br>Cantidad de Baños</h6>
+            <input type="text" name="Baños" class="form-control" placeholder="0" aria-label="0">
+            <h6><br>Cantidad de Camas</h6>
+            <input type="text" name="Camas" class="form-control" placeholder="0" aria-label="0">
+            <h6><br>Capacidad</h6>
+            <input type="text" name="Huespedes" class="form-control" placeholder="0" aria-label="0">
         </div>
 
         <div class="col">
-            <h6><br><br><br>Capacidad</h6>
-            <h6>Número de Personas</h6>
-            <input type="text" name="noPersonas" class="form-control" placeholder="" aria-label="Example text with two button addons">
-            <h6><br>Número de Camas</h6>
-            <div class="row">
-                <div class="col">
-                    <h6>No. de Camas Individuales</h6>
-                    <input type="text" name="noCamasInd" class="form-control" placeholder="" aria-label="Example text with two button addons">
-                </div>
-                <div class="col">
-                    <h6>No. de Camas Dobles</h6>
-                    <input type="text" name="noCamasDob" class="form-control" placeholder="" aria-label="Example text with two button addons">
-                </div>
-            </div>
+            <h6><br><br><br>Comodidades</h6>
+            <h6>Aire Acondicionado</h6>
+            <input type="text" name="Aire_Acondicionado" class="form-control" placeholder="Si/No" aria-label="Si/No">
+            <h6><br>WiFi</h6>
+            <input type="text" name="WiFi" class="form-control" placeholder="Si/No" aria-label="Si/No">
+            <h6><br>Cocina</h6>
+            <input type="text" name="Cocina" class="form-control" placeholder="Si/No" aria-label="Si/No">
         </div>
         
         <div class="col">
@@ -76,20 +69,49 @@
                 <div class="col d-grid mx-auto">
                     <button type="submit" name="botonGuardarHabitacion" value="guardarHabitacion" class="button button-block">Guardar</button>
                 </div>
-                <h6><br>Datos de Ubicación y Contacto</h6>
-                <h6>Planta</h6>
-                <input type="text" name="ubicacionHabitacion" class="form-control" placeholder="Piso 2" aria-label="Piso 2">
-                <h6><br>Vista</h6>
-                <input type="text" name="vistaHabitacion" class="form-control" placeholder="Vista al mar" aria-label="Vista al mar">
-                <h6><br>Extensión</h6>
-                <input type="text" name="extensionHabitacion" class="form-control" placeholder="123" aria-label="123">
-                <h6><br>Mapa Hotel</h6>
+                <h6><br>Precio y Galeria</h6>
+                <h6><br>Precio</h6>
+                <input type="text" name="Precio_Noche" class="form-control" placeholder="$000.000" aria-label="000.000">
+                <h6><br>Galeria</h6>
                 <img src="../assets/mapa.jpg" class="img-fluid" alt="...">
         </div>
         
     </div>
 
-    </form> 
+    </form>
+
+    <div class="row">
+        <table class="table mytable-striped">
+            <thead>
+            <tr>
+                <th>ID Habitación</th>
+                <th>Nombre Habitación</th>
+                <th>No. Baños</th>
+                <th>No. Camas</th>
+                <th>Capacidad</th>
+                <th>Aire Acondicionado</th>
+                <th>WiFi</th>
+                <th>Cocina</th>
+                <th>Precio Noche</th>
+            </tr>
+            </thead>
+            <tbody>
+                {% for habitacion in habitaciones %}
+                    <tr>
+                        <td>{{habitacion[0]}}</td>
+                        <td>{{habitacion[1]}}</td>
+                        <td>{{habitacion[2]}}</td>
+                        <td>{{habitacion[3]}}</td>
+                        <td>{{habitacion[4]}}</td>
+                        <td>{{habitacion[5]}}</td>
+                        <td>{{habitacion[6]}}</td>
+                        <td>{{habitacion[7]}}</td>
+                        <td>{{habitacion[9]}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+            </table>
+    </div>
 
     </div>
 
