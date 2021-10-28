@@ -81,8 +81,8 @@ def bedroom_actions():
         return render_template('bedroom-actions.html')
     else: 
         #Validar los valores de los formularios de registro
-        if request.form['botonGuardarHabitacion'] == "guardarHabitacion":
-            nombreHabitacion = request.form['nombreHabitacion ']
+        #if request.form['botonGuardarHabitacion'] == "guardarHabitacion":#
+            nombreHabitacion = request.form['nombreHabitacion']
             descripcionHabitacion = request.form["descripcionHabitacion"]
             equipoHabitacion = request.form["equipoHabitacion"]
             tamanoHabitacion = request.form["tamanoHabitacion"]
@@ -94,7 +94,7 @@ def bedroom_actions():
             extensionHabitacion = request.form["extensionHabitacion"]
             bd.insertar_habitaciones(nombreHabitacion,descripcionHabitacion,equipoHabitacion,tamanoHabitacion,
             noPersonas,noCamasInd,noCamasDob,ubicacionHabitacion,vistaHabitacion,extensionHabitacion)
-            return redirect('/')
+            return render_template('bedroom-actions.html')
 
 @app.route('/bedrooms_qualify')
 def bedroom_qualify():
