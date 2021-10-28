@@ -35,3 +35,12 @@ def insertar_usuario(nombre, apellido, correo, contraseña):
     conexion.commit()
     conexion.close()
 
+def insertar_habitaciones(nombreHabitacion,descripcionHabitacion,equipoHabitacion,tamanoHabitacion,noPersonas,noCamasInd,noCamasDob,ubicacionHabitacion,vistaHabitacion,extensionHabitacion):
+    conexion = obtener_conexion()
+    cursor = conexion.cursor()
+    
+    strsql = "INSERT INTO Habitacion (nombreHabitacion,descripcionHabitacion,equipoHabitacion,tamanoHabitacion,noPersonas,noCamasInd,noCamasDob,ubicacionHabitacion,vistaHabitacion,extensionHabitacion) VALUES ('{}','{}','{}','{}','{}','{}','{}','{}','{}','{}')".format(nombreHabitacion,descripcionHabitacion,equipoHabitacion,tamanoHabitacion,noPersonas,noCamasInd,noCamasDob,ubicacionHabitacion,vistaHabitacion,extensionHabitacion)
+    
+    cursor.execute(strsql)
+    conexion.commit()
+    conexion.close()

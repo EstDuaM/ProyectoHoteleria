@@ -74,9 +74,27 @@ def dashboard():
 def bedrooms():
     return render_template('bedrooms.html')
 
-@app.route('/bedrooms_actions')
+@app.route('/bedrooms_actions', methods=['GET', 'POST'])
 def bedroom_actions():
-    return render_template('bedroom-actions.html')
+
+    if request.method == 'GET':
+        return render_template('bedroom-actions.html')
+    else: 
+        #Validar los valores de los formularios de registro
+        if request.form['botonGuardarHabitacion'] == "guardarHabitacion":
+            nombreHabitacion = request.form['nombreHabitacion ']
+            descripcionHabitacion = request.form["descripcionHabitacion"]
+            equipoHabitacion = request.form["equipoHabitacion"]
+            tamanoHabitacion = request.form["tamanoHabitacion"]
+            noPersonas = request.form["noPersonas"]
+            noCamasInd = request.form["noCamasInd"]
+            noCamasDob = request.form["noCamasDob"]
+            ubicacionHabitacion = request.form["ubicacionHabitacion"]
+            vistaHabitacion = request.form["vistaHabitacion"]
+            extensionHabitacion = request.form["extensionHabitacion"]
+            bd.insertar_habitaciones(nombreHabitacion,descripcionHabitacion,equipoHabitacion,tamanoHabitacion,
+            noPersonas,noCamasInd,noCamasDob,ubicacionHabitacion,vistaHabitacion,extensionHabitacion)
+            return redirect('/')
 
 @app.route('/bedrooms_qualify')
 def bedroom_qualify():
