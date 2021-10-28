@@ -31,7 +31,7 @@
 
     <div class="container-fluid">
 
-    <form action="http://127.0.0.1:5000/bedroom_actions" method="post" method="get" id="form-bedrooms"> 
+    <form action="http://127.0.0.1:5000/bedrooms_actions" method="post" id="form-bedrooms"> 
 
     <div class="row">
 
@@ -56,37 +56,31 @@
             <div class="row">
                 <div class="col">
                     <h6>No. de Camas Individuales</h6>
-                    <input type="noCamasInd" name="enoCamasInd" class="form-control" placeholder="" aria-label="Example text with two button addons">
+                    <input type="text" name="noCamasInd" class="form-control" placeholder="" aria-label="Example text with two button addons">
                 </div>
                 <div class="col">
                     <h6>No. de Camas Dobles</h6>
-                    <input type="noCamasDob" name="noCamasDob" class="form-control" placeholder="" aria-label="Example text with two button addons">
+                    <input type="text" name="noCamasDob" class="form-control" placeholder="" aria-label="Example text with two button addons">
                 </div>
             </div>
         </div>
         
         <div class="col">
             <div class="row">
-                <div class="col d-grid mx-auto">
+                <!--<div class="col d-grid mx-auto">
                     <button type="button" class="btn btn-warning">Editar</button>
-                </div>
+               </div>
                 <div class="col d-grid mx-auto">
-                    <button type="button" class="btn btn-danger">Eliminar</button>
-                </div>
+                   <button type="button" class="btn btn-danger">Eliminar</button>
+               </div>--->
                 <div class="col d-grid mx-auto">
                     <button type="submit" name="botonGuardarHabitacion" value="guardarHabitacion" class="button button-block">Guardar</button>
                 </div>
                 <h6><br>Datos de Ubicación y Contacto</h6>
                 <h6>Planta</h6>
-                    <select name="ubicacionHabitacion" class="form-select" aria-label="Default select example">
-                        <option value="1">Piso 1</option>
-                        <option value="2">Piso 2</option>
-                    </select>
+                <input type="text" name="ubicacionHabitacion" class="form-control" placeholder="Piso 2" aria-label="Piso 2">
                 <h6><br>Vista</h6>
-                    <select name="vistaHabitacion" class="form-select" aria-label="Default select example">
-                        <option value="1">Vista al Mar</option>
-                        <option value="2">Vista Interior</option>
-                    </select>
+                <input type="text" name="vistaHabitacion" class="form-control" placeholder="Vista al mar" aria-label="Vista al mar">
                 <h6><br>Extensión</h6>
                 <input type="text" name="extensionHabitacion" class="form-control" placeholder="123" aria-label="123">
                 <h6><br>Mapa Hotel</h6>
