@@ -31,65 +31,36 @@
 
     <div class="container-fluid">
 
+    <form action="http://127.0.0.1:5000/bedroom_actions" method="post" method="get" id="form-bedrooms"> 
+
     <div class="row">
 
         <div class="col">
             <h5>Agregar Habitación</h5>
             <h6><br>Información Básica</h6>
-            <div class="row">
-                <div class="col">
-                    <h6>Nombre de la Habitación</h6>
-                    <input type="text" class="form-control" placeholder="AAA" aria-label="AAA">
-                </div>
-                <div class="col">
-                    <h6>Tipo</h6>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Selecciones el tipo de habitación</option>
-                        <option value="1">Tipo A</option>
-                        <option value="2">Tipo B</option>
-                    </select>
-                </div>
-            </div>
+            <h6>Nombre de la Habitación</h6>
+            <input type="text" name="nombreHabitacion" class="form-control" placeholder="Nombre habitacion" aria-label="AAA">
             <h6><br>Descripción de la Habitación</h6>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea name="descripcionHabitacion" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
             <h6><br>Equipo</h6>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea name="equipoHabitacion" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
             <h6><br>Tamaño</h6>
-            <input type="text" class="form-control" placeholder="XX mts2" aria-label="XX mts2">
-            <h6><br>¿Compartir en una oferta?</h6>
-                <select class="form-select" aria-label="Default select example">
-                    <option value="1">Si</option>
-                    <option value="2">No</option>
-                </select>
-            <h6><br>Características Premium</h6>
-            <input type="text" class="form-control" placeholder="Baño turco, wifi, etc" aria-label="Baño turco, wifi, etc">
+            <input type="text" name="tamanoHabitacion" class="form-control" placeholder="XX mts2" aria-label="XX mts2">
         </div>
 
         <div class="col">
             <h6><br><br><br>Capacidad</h6>
             <h6>Número de Personas</h6>
-            <div class="input-group mb-3">
-                <button class="btn btn-outline-secondary" type="button">-</button>
-                <input type="text" class="form-control" placeholder="" aria-label="Example text with two button addons">
-                <button class="btn btn-outline-secondary" type="button">+</button>
-            </div>
-            <h6>Número de Camas</h6>
+            <input type="text" name="noPersonas" class="form-control" placeholder="" aria-label="Example text with two button addons">
+            <h6><br>Número de Camas</h6>
             <div class="row">
                 <div class="col">
                     <h6>No. de Camas Individuales</h6>
-                    <div class="input-group mb-3">
-                        <button class="btn btn-outline-secondary" type="button">-</button>
-                        <input type="text" class="form-control" placeholder="" aria-label="Example text with two button addons">
-                        <button class="btn btn-outline-secondary" type="button">+</button>
-                    </div>
+                    <input type="noCamasInd" name="enoCamasInd" class="form-control" placeholder="" aria-label="Example text with two button addons">
                 </div>
                 <div class="col">
                     <h6>No. de Camas Dobles</h6>
-                    <div class="input-group mb-3">
-                        <button class="btn btn-outline-secondary" type="button">-</button>
-                        <input type="text" class="form-control" placeholder="" aria-label="Example text with two button addons">
-                        <button class="btn btn-outline-secondary" type="button">+</button>
-                    </div>
+                    <input type="noCamasDob" name="noCamasDob" class="form-control" placeholder="" aria-label="Example text with two button addons">
                 </div>
             </div>
         </div>
@@ -103,26 +74,28 @@
                     <button type="button" class="btn btn-danger">Eliminar</button>
                 </div>
                 <div class="col d-grid mx-auto">
-                    <button type="button" class="btn btn-success">Guardar</button>
+                    <button type="submit" name="botonGuardarHabitacion" value="guardarHabitacion" class="button button-block">Guardar</button>
                 </div>
                 <h6><br>Datos de Ubicación y Contacto</h6>
                 <h6>Planta</h6>
-                    <select class="form-select" aria-label="Default select example">
+                    <select name="ubicacionHabitacion" class="form-select" aria-label="Default select example">
                         <option value="1">Piso 1</option>
                         <option value="2">Piso 2</option>
                     </select>
                 <h6><br>Vista</h6>
-                    <select class="form-select" aria-label="Default select example">
+                    <select name="vistaHabitacion" class="form-select" aria-label="Default select example">
                         <option value="1">Vista al Mar</option>
                         <option value="2">Vista Interior</option>
                     </select>
                 <h6><br>Extensión</h6>
-                <input type="text" class="form-control" placeholder="123" aria-label="123">
+                <input type="text" name="extensionHabitacion" class="form-control" placeholder="123" aria-label="123">
                 <h6><br>Mapa Hotel</h6>
                 <img src="../assets/mapa.jpg" class="img-fluid" alt="...">
         </div>
         
     </div>
+
+    </form> 
 
     </div>
 
