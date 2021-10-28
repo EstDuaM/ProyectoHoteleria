@@ -4,6 +4,7 @@ import werkzeug.security as ws
 import bd
 from flask import make_response
 
+
 app = Flask(__name__)
 app.secret_key = 'mi_llave_secreta'
 
@@ -78,23 +79,26 @@ def bedrooms():
 def bedroom_actions():
 
     if request.method == 'GET':
-        return render_template('bedroom-actions.html')
+
+        habitaciones = bd.obtener_todos_registros('Habitacion')
+        return render_template('bedroom-actions.html', habitaciones = habitaciones)
+
     else: 
         #Validar los valores de los formularios de registro
         #if request.form['botonGuardarHabitacion'] == "guardarHabitacion":#
-            nombreHabitacion = request.form['nombreHabitacion']
-            descripcionHabitacion = request.form["descripcionHabitacion"]
-            equipoHabitacion = request.form["equipoHabitacion"]
-            tamanoHabitacion = request.form["tamanoHabitacion"]
-            noPersonas = request.form["noPersonas"]
-            noCamasInd = request.form["noCamasInd"]
-            noCamasDob = request.form["noCamasDob"]
-            ubicacionHabitacion = request.form["ubicacionHabitacion"]
-            vistaHabitacion = request.form["vistaHabitacion"]
-            extensionHabitacion = request.form["extensionHabitacion"]
-            bd.insertar_habitaciones(nombreHabitacion,descripcionHabitacion,equipoHabitacion,tamanoHabitacion,
-            noPersonas,noCamasInd,noCamasDob,ubicacionHabitacion,vistaHabitacion,extensionHabitacion)
-            return render_template('bedroom-actions.html')
+            Nombre = request.form['Nombre']
+            Baños = request.form["Baños"]
+            Camas = request.form["Camas"]
+            Huespedes = request.form["Huespedes"]
+            Aire_Acondicionado = request.form["Aire_Acondicionado"]
+            WiFi = request.form["WiFi"]
+            Cocina= request.form["Cocina"]
+            Precio_Noche = request.form["Precio_Noche"]
+            bd.insertar_habitaciones(Nombre,Baños,Camas,Huespedes,Aire_Acondicionado,WiFi,Cocina,Precio_Noche)
+
+            habitaciones = bd.obtener_todos_registros('Habitacion')
+
+            return render_template('bedroom-actions.html', habitaciones = habitaciones)
 
 @app.route('/bedrooms_qualify')
 def bedroom_qualify():
