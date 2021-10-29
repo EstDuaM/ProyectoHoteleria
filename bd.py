@@ -59,3 +59,14 @@ def insertar_habitaciones(Nombre,Baños,Camas,Huespedes,Aire_Acondicionado,WiFi,
     cursor.execute(strsql)
     conexion.commit()
     conexion.close()
+
+def eliminar_habitaciones(idhabitacion):
+    conexion = obtener_conexion()
+    cursor = conexion.cursor()
+    
+    strsql = "DELETE FROM Habitacion WHERE  idhabitacion ='%s'" % (idhabitacion)
+
+    cursor.execute(strsql)
+    conexion.commit()
+    conexion.close()
+

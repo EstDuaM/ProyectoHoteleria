@@ -85,7 +85,7 @@ def bedroom_actions():
 
     else: 
         #Validar los valores de los formularios de registro
-        #if request.form['botonGuardarHabitacion'] == "guardarHabitacion":#
+        if request.form['botonGuardarHabitacion'] == "guardarHabitacion":
             Nombre = request.form['Nombre']
             Baños = request.form["Baños"]
             Camas = request.form["Camas"]
@@ -95,6 +95,23 @@ def bedroom_actions():
             Cocina= request.form["Cocina"]
             Precio_Noche = request.form["Precio_Noche"]
             bd.insertar_habitaciones(Nombre,Baños,Camas,Huespedes,Aire_Acondicionado,WiFi,Cocina,Precio_Noche)
+
+            habitaciones = bd.obtener_todos_registros('Habitacion')
+
+            return render_template('bedroom-actions.html', habitaciones = habitaciones)
+
+@app.route('/bedrooms_actions_delete', methods=['GET', 'POST'])
+def bedroom_actions_delete():
+
+    if request.method == 'GET':
+    
+        habitaciones = bd.obtener_todos_registros('Habitacion')
+        return render_template('bedroom-actions.html', habitaciones = habitaciones)
+
+    else: 
+        #Validar los valores de los formularios de registro
+        if request.form['botonEliminarHabitacion'] == "eliminarHabitacion":
+            bd.eliminar_habitaciones(request.form["idhabitacion"])
 
             habitaciones = bd.obtener_todos_registros('Habitacion')
 
