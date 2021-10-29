@@ -25,6 +25,21 @@ def obtener_registro(tabla, condicion):
     
     return datos
 
+def obtener_todos_registros(tabla):
+    conexion = obtener_conexion()
+    cursor = conexion.cursor()
+
+    habitaciones = []
+    
+    strsql = 'SELECT * FROM {}'.format(tabla)
+    
+    cursor.execute(strsql)
+    
+    habitaciones  = cursor.fetchall()
+    conexion.close()
+    
+    return habitaciones 
+
 def insertar_usuario(nombre, apellido, correo, contraseña):
     conexion = obtener_conexion()
     cursor = conexion.cursor()
@@ -35,12 +50,23 @@ def insertar_usuario(nombre, apellido, correo, contraseña):
     conexion.commit()
     conexion.close()
 
-def insertar_habitaciones(nombreHabitacion,descripcionHabitacion,equipoHabitacion,tamanoHabitacion,noPersonas,noCamasInd,noCamasDob,ubicacionHabitacion,vistaHabitacion,extensionHabitacion):
+def insertar_habitaciones(Nombre,Baños,Camas,Huespedes,Aire_Acondicionado,WiFi,Cocina,Precio_Noche):
     conexion = obtener_conexion()
     cursor = conexion.cursor()
     
-    strsql = "INSERT INTO Habitacion (nombreHabitacion,descripcionHabitacion,equipoHabitacion,tamanoHabitacion,noPersonas,noCamasInd,noCamasDob,ubicacionHabitacion,vistaHabitacion,extensionHabitacion) VALUES ('{}','{}','{}','{}','{}','{}','{}','{}','{}','{}')".format(nombreHabitacion,descripcionHabitacion,equipoHabitacion,tamanoHabitacion,noPersonas,noCamasInd,noCamasDob,ubicacionHabitacion,vistaHabitacion,extensionHabitacion)
+    strsql = "INSERT INTO Habitacion (Nombre,Baños,Camas,Huespedes,Aire_Acondicionado,WiFi,Cocina,Precio_Noche) VALUES ('{}','{}','{}','{}','{}','{}','{}','{}')".format(Nombre,Baños,Camas,Huespedes,Aire_Acondicionado,WiFi,Cocina,Precio_Noche)
     
     cursor.execute(strsql)
     conexion.commit()
     conexion.close()
+
+def eliminar_habitaciones(idhabitacion):
+    conexion = obtener_conexion()
+    cursor = conexion.cursor()
+    
+    strsql = "DELETE FROM Habitacion WHERE  idhabitacion ='%s'" % (idhabitacion)
+
+    cursor.execute(strsql)
+    conexion.commit()
+    conexion.close()
+

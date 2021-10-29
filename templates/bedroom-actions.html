@@ -31,7 +31,7 @@
 
     <div class="container-fluid">
 
-    <form action="http://127.0.0.1:5000/bedrooms_actions" method="post" id="form-bedrooms"> 
+    <form action="http://127.0.0.1:5000/bedrooms_actions" method="post" method="get" id="form-bedrooms"> 
 
     <div class="row">
 
@@ -52,9 +52,9 @@
             <h6><br><br><br>Comodidades</h6>
             <h6>Aire Acondicionado</h6>
             <input type="text" name="Aire_Acondicionado" class="form-control" placeholder="Si/No" aria-label="Si/No">
-            <h6><br>WiFi</h6>
+            <h6>WiFi</h6>
             <input type="text" name="WiFi" class="form-control" placeholder="Si/No" aria-label="Si/No">
-            <h6><br>Cocina</h6>
+            <h6>Cocina</h6>
             <input type="text" name="Cocina" class="form-control" placeholder="Si/No" aria-label="Si/No">
         </div>
         
@@ -70,10 +70,10 @@
                     <button type="submit" name="botonGuardarHabitacion" value="guardarHabitacion" class="button button-block">Guardar</button>
                 </div>
                 <h6><br>Precio y Galeria</h6>
-                <h6><br>Precio</h6>
+                <h6>Precio</h6>
                 <input type="text" name="Precio_Noche" class="form-control" placeholder="$000.000" aria-label="000.000">
                 <h6><br>Galeria</h6>
-                <img src="../assets/mapa.jpg" class="img-fluid" alt="...">
+                <img src="../assets/mapa.jpg" name="Img" class="img-fluid" alt="...">
         </div>
         
     </div>
@@ -93,6 +93,8 @@
                 <th>WiFi</th>
                 <th>Cocina</th>
                 <th>Precio Noche</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
             </tr>
             </thead>
             <tbody>
@@ -107,6 +109,13 @@
                         <td>{{habitacion[6]}}</td>
                         <td>{{habitacion[7]}}</td>
                         <td>{{habitacion[9]}}</td>
+                        <td><button type="submit" name="botonEditarHabitacion" value="editarHabitacion" class="btn btn-warning">Editar</button></td>
+                        <td>
+                            <form action="http://127.0.0.1:5000/bedrooms_actions_delete" method="post" method="get" id="form-bedrooms2">
+                                <input type="hidden" name="idhabitacion" value="{{habitacion[0]}}">
+                                <button type="submit" name="botonEliminarHabitacion" value="eliminarHabitacion" class="btn btn-danger">Eliminar</button>
+                            </form>
+                        </td>
                     </tr>
                 {% endfor %}
             </tbody>
