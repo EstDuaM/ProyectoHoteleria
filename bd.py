@@ -50,6 +50,16 @@ def insertar_usuario(nombre, apellido, correo, contraseña):
     conexion.commit()
     conexion.close()
 
+def insertar_reseña(estrella,comentario):
+    conexion = obtener_conexion()
+    cursor = conexion.cursor()
+    
+    strsql = "INSERT INTO Comentario (Calificacion, Comentario) VALUES ('{}','{}')".format(estrella, comentario)
+    
+    cursor.execute(strsql)
+    conexion.commit()
+    conexion.close()
+
 def insertar_habitaciones(Nombre,Baños,Camas,Huespedes,Aire_Acondicionado,WiFi,Cocina,Precio_Noche):
     conexion = obtener_conexion()
     cursor = conexion.cursor()
