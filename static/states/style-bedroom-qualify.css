@@ -75,6 +75,23 @@ header div .logo img{
     padding: 0px 0px 0px 0px;
 }
 
+section div form h3{
+    text-align: center;
+    margin-top: 30px;
+}
+
+section div form .comentar{
+    text-align: center;
+    margin-top: 30px;
+    margin-right: 660px;
+}
+
+section div form .boton{
+    text-align: center;
+    margin-top: 180px;
+    margin-bottom: 50px;
+}
+
 section div form p, form input[type="submit"]{
     width: 250px;
     margin: 0 auto;
@@ -83,7 +100,7 @@ section div form p, form input[type="submit"]{
   }
   
 section div form label {
-    font-size: 20px;
+    font-size: 30px;
   }
 
 section div form input {
@@ -102,6 +119,7 @@ section div form  label {
 section div form  .clasificacion {
     direction: rtl;
     unicode-bidi: bidi-override;
+    text-align: center;
   }
   
 section div form  label:hover, section div form label:hover ~ label {
@@ -111,6 +129,8 @@ section div form  label:hover, section div form label:hover ~ label {
 section div form  input[type="radio"]:checked ~ label {
     color: orange;
   }
+
+
 
 input[type="submit" i] {
     appearance: auto;
