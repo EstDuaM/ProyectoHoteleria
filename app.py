@@ -67,15 +67,15 @@ def perfil(correo=None):
     else:
         return render_template('perfil-usuario.html')        
 
-@app.route('/dashboard')
+@app.route('/perfil/dashboard')
 def dashboard():
     return render_template('Dashboard.html')
 
-@app.route('/bedrooms')
+@app.route('/perfil/bedrooms')
 def bedrooms():
     return render_template('bedrooms.html')
 
-@app.route('/bedrooms_actions', methods=['GET', 'POST'])
+@app.route('/perfil/bedrooms_actions', methods=['GET', 'POST'])
 def bedroom_actions():
 
     if request.method == 'GET':
