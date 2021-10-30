@@ -21,7 +21,7 @@ def bienvenido():
     return render_template('welcome.html')
     
 
-@app.route('/login', methods=['GET', 'POST'])
+@app.route('/perfil/login', methods=['GET', 'POST'])
 def login():
 
     if request.method == 'GET':
@@ -121,8 +121,43 @@ def bedroom_actions_delete():
 def bedroom_qualify():
     return render_template('bedroom-qualify.html')
 
+@app.route('/perfil/welcome')
+def welcome():
+    return render_template('welcome.html')
+
+
+
 @app.route('/cerrar_sesion')
 def cerrar_sesion():
     if 'correo' in session:
         session.pop('correo')
         return redirect('/')
+
+
+@app.route('/login', methods=['GET', 'POST'])
+def login2():
+
+    if request.method == 'GET':
+        return render_template('login.html')
+    else: 
+        #Validar los valores de los formularios de registro
+        if request.form['boton-env'] == "anterior":
+            nombre = request.form['nombre']
+            apellido = request.form["apellido"]
+            correo = request.form["correo"]
+            contraseña = request.form["contraseña"]
+            bd.insertar_usuario(nombre,apellido,correo,ws.generate_password_hash(contraseña))
+            session['correo'] = correo
+            return redirect('/perfil/{}'.format(correo))
+        #Validar los valores de los formularios de inicio de sesión
+        elif request.form['boton-env'] == "siguiente":
+            correoIni = request.form['correo-ini']
+            registro_usuario = bd.obtener_registro('Usuario', "correo='{}'".format(correoIni))
+            contraseña_bd = registro_usuario[0][4]
+            if registro_usuario is not None:
+                contraIni = request.form["contra-ini"]
+                contraseña_igual = ws.check_password_hash(contraseña_bd, contraIni)
+                if contraseña_igual:
+                    session['correo'] = correoIni
+                    return redirect('/perfil/{}'.format(correoIni))
+            return render_template('login.html')
