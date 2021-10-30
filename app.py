@@ -117,6 +117,28 @@ def bedroom_actions_delete():
 
             return render_template('bedroom-actions.html', habitaciones = habitaciones)
 
+@app.route('/bedrooms_qualify', methods=['GET', 'POST'])
+def bedroom_qualify():
+    if request.method == 'GET':
+        return render_template('bedroom-qualify.html')
+    else: 
+        #Validar los valores de los formularios de calificacion y comentarios
+            estrella = request.form['estrellas']
+            comentario = request.form['comentario']
+            print(estrella)
+            print(comentario)
+            bd.insertar_reseña(estrella, comentario)
+            #session['correo'] = correo
+            return redirect('/bedrooms')
+        #Validar los valores de los formularios de inicio de sesión
+        
+
+@app.route('/cerrar_sesion')
+def cerrar_sesion():
+    if 'correo' in session:
+        session.pop('correo')
+        return redirect('/')
+
 @app.route('/bedrooms_actions_edit', methods=['GET', 'POST'])
 def bedroom_actions_edit():
 
@@ -142,25 +164,3 @@ def bedroom_actions_update():
         habitaciones = bd.obtener_todos_registros('Habitacion')
 
         return render_template('bedroom-actions.html', habitaciones = habitaciones)
-
-@app.route('/bedrooms_qualify', methods=['GET', 'POST'])
-def bedroom_qualify():
-    if request.method == 'GET':
-        return render_template('bedroom-qualify.html')
-    else: 
-        #Validar los valores de los formularios de calificacion y comentarios
-            estrella = request.form['estrellas']
-            comentario = request.form['comentario']
-            print(estrella)
-            print(comentario)
-            bd.insertar_reseña(estrella, comentario)
-            #session['correo'] = correo
-            return redirect('/bedrooms')
-        #Validar los valores de los formularios de inicio de sesión
-        
-
-@app.route('/cerrar_sesion')
-def cerrar_sesion():
-    if 'correo' in session:
-        session.pop('correo')
-        return redirect('/')
