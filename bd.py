@@ -70,3 +70,27 @@ def eliminar_habitaciones(idhabitacion):
     conexion.commit()
     conexion.close()
 
+def obtener_habitacion_por_id(idhabitacion):
+    conexion = obtener_conexion()
+    cursor = conexion.cursor()
+
+    strsql = "SELECT idhabitacion, Nombre, Baños, Camas, Huespedes, Aire_Acondicionado, WiFi, Cocina, Precio_Noche FROM Habitacion WHERE idhabitacion ='%s'" % (idhabitacion)
+    
+    cursor.execute(strsql)
+    habitacion  = cursor.fetchone()
+    conexion.commit()
+    conexion.close()
+
+    return habitacion
+
+def actualizar_habitaciones(Nombre,Baños,Camas,Huespedes,Aire_Acondicionado,WiFi,Cocina,Precio_Noche,idhabitacion):
+    conexion = obtener_conexion()
+    cursor = conexion.cursor()
+
+    strsql = "UPDATE Habitacion SET Nombre = '%s', Baños = '%s', Camas = '%s', Huespedes = '%s', Aire_Acondicionado = '%s', WiFi = '%s', Cocina = '%s', Precio_Noche = '%s' WHERE idhabitacion ='%s'" % (Nombre,Baños,Camas,Huespedes,Aire_Acondicionado,WiFi,Cocina,Precio_Noche,idhabitacion)
+
+    cursor.execute(strsql)
+
+    conexion.commit()
+    conexion.close()
+
