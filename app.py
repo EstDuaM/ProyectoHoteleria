@@ -102,7 +102,7 @@ def bedroom_actions():
 
 @app.route('/bedrooms_actions_delete', methods=['GET', 'POST'])
 def bedroom_actions_delete():
-
+    
     if request.method == 'GET':
     
         habitaciones = bd.obtener_todos_registros('Habitacion')
@@ -138,3 +138,29 @@ def cerrar_sesion():
     if 'correo' in session:
         session.pop('correo')
         return redirect('/')
+
+@app.route('/bedrooms_actions_edit', methods=['GET', 'POST'])
+def bedroom_actions_edit():
+
+            idhabitacion = request.form["idhabitacionedit"]
+            habitacionEdit = bd.obtener_habitacion_por_id(idhabitacion)
+            return render_template('bedroom-actions-update.html', habitacionEdit = habitacionEdit)
+
+@app.route("/bedrooms_actions_update", methods=["POST"])
+def bedroom_actions_update():
+
+    if request.form['botonActualizarHabitacion'] == "actualizarHabitacion":
+        idhabitacion = request.form['idhabitacion']
+        Nombre = request.form['Nombre']
+        Baños = request.form["Baños"]
+        Camas = request.form["Camas"]
+        Huespedes = request.form["Huespedes"]
+        Aire_Acondicionado = request.form["Aire_Acondicionado"]
+        WiFi = request.form["WiFi"]
+        Cocina= request.form["Cocina"]
+        Precio_Noche = request.form["Precio_Noche"]
+        bd.actualizar_habitaciones(Nombre,Baños,Camas,Huespedes,Aire_Acondicionado,WiFi,Cocina,Precio_Noche,idhabitacion)
+
+        habitaciones = bd.obtener_todos_registros('Habitacion')
+
+        return render_template('bedroom-actions.html', habitaciones = habitaciones)
