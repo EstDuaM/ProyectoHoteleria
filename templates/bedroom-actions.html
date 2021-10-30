@@ -109,7 +109,11 @@
                         <td>{{habitacion[6]}}</td>
                         <td>{{habitacion[7]}}</td>
                         <td>{{habitacion[9]}}</td>
-                        <td><button type="submit" name="botonEditarHabitacion" value="editarHabitacion" class="btn btn-warning">Editar</button></td>
+                        <td>
+                            <form action="http://127.0.0.1:5000/bedrooms_actions_edit" method="post" method="get" id="form-bedrooms1">
+                                <input type="hidden" name="idhabitacionedit" value="{{habitacion[0]}}">
+                                <button type="submit" name="botonEditarHabitacion" value="editarHabitacion" class="btn btn-warning">Editar</button>
+                            </form>
                         <td>
                             <form action="http://127.0.0.1:5000/bedrooms_actions_delete" method="post" method="get" id="form-bedrooms2">
                                 <input type="hidden" name="idhabitacion" value="{{habitacion[0]}}">
